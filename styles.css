@@ -1,0 +1,83 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.link-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.link-card:hover::after {
+    left: 100%;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+main > div {
+    transition: all 0.3s ease;
+}
+
+main > div a {
+    transition: all 0.3s ease;
+}
+
+main > div a:hover {
+    transform: translateY(-2px);
+}
+
+img[src*="profile.png"] {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+img[src*="profile.png"]:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiLinktree - Juan Pablo Paz Quiroga</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B6B',
+                        secondary: '#4ECDC4'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen transition-colors duration-300 bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 dark:from-gray-900 dark:via-purple-900 dark:to-violet-950">
+    <div class="container mx-auto px-4 py-8 max-w-md animate-fade-in">
+        <!-- Card principal que contiene todo -->
+        <div class="bg-white/95 dark:bg-white/90 rounded-xl p-6 shadow-xl">
+            <!-- Header -->
+            <header class="text-center mb-6">
+                <div class="relative w-48 h-48 mx-auto mb-3">
+                    <img src="img/profile-3.png" 
+                         alt="Foto de perfil" 
+                         class="w-full h-full hover:scale-105 transition-transform duration-300">
+                </div>
+                <h1 class="text-xl font-bold text-gray-800 dark:text-gray-800 mb-1">@JuanPabloPazQ</h1>
+                <p class="text-sm text-gray-600 dark:text-gray-600">Desarrollador Web & Creador de Contenido</p>
+            </header>
+
+            <!-- Separador -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mb-6"></div>
+
+            <!-- Enlaces principales -->
+            <main class="space-y-3">
+                <a href="https://www.linkedin.com/in/juan-pablo-paz-quiroga" class="block p-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-3">
+                    <i class="fab fa-linkedin text-xl text-white"></i>
+                    <span class="text-white text-sm font-medium">LinkedIn</span>
+                </a>
+
+                <a href="https://x.com/JuanPabloPazQ" class="block p-3 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-3">
+                    <i class="fab fa-twitter text-xl text-white"></i>
+                    <span class="text-white text-sm font-medium">Twitter</span>
+                </a>
+
+                <a href="https://github.com/jppq2026" class="block p-3 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-3">
+                    <i class="fab fa-github text-xl text-white"></i>
+                    <span class="text-white text-sm font-medium">GitHub</span>
+                </a>
+
+                <a href="https://jppq2026.github.io/" class="block p-3 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-3">
+                    <i class="fas fa-code text-xl text-white"></i>
+                    <span class="text-white text-sm font-medium">Portafolio GitHub</span>
+                </a>
+
+                <a href="https://jppq2026.infinitydevlab.com/" class="block p-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-3">
+                    <i class="fas fa-briefcase text-xl text-white"></i>
+                    <span class="text-white text-sm font-medium">Portafolio de Proyectos</span>
+                </a>
+            </main>
+
+            <!-- Separador -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent my-6"></div>
+
+            <!-- Footer -->
+            <footer class="text-center">
+                <div class="flex justify-center space-x-4 mb-2">
+                    <a href="https://github.com/jppq2026" class="text-gray-600 hover:text-gray-800 transition-colors">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/juan-pablo-paz-quiroga" class="text-gray-600 hover:text-gray-800 transition-colors">
+                        <i class="fab fa-linkedin text-lg"></i>
+                    </a>
+                    <a href="https://x.com/JuanPabloPazQ" class="text-gray-600 hover:text-gray-800 transition-colors">
+                        <i class="fab fa-twitter text-lg"></i>
+                    </a>
+                </div>
+                <p class="text-gray-600 text-xs">© 2024 Juan Pablo Paz Quiroga</p>
+            </footer>
+        </div>
+
+        <!-- Botón modo oscuro -->
+        <button id="darkModeToggle" 
+                class="fixed top-4 right-4 p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white transition-all duration-300">
+            <i class="fas fa-moon dark:hidden"></i>
+            <i class="fas fa-sun hidden dark:block"></i>
+        </button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
